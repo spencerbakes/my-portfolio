@@ -30,7 +30,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: null
+# removed to play around with regular theme
+# theme: null
 plugins:
   - jekyll-feed
 
