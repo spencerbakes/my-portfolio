@@ -31,7 +31,7 @@ github_username:  spencerbakes
 # removed to play around with regular theme
 # theme: null
 plugins:
-  - jekyll-feed
+  - jekyll-feed 
 
 # Exclude from processing.
 # The following items will not be processed, by default.
