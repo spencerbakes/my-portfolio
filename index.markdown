@@ -10,4 +10,4 @@ exclude: true
 I do things at **Alexa**, formerly at **Graphiq**.
 Please take a look around.
 
-[Writing](/writing.md) / [Photography](/photography.md) / [Design](/design.md)
+[Design](/design.md) / [Photography](/photography.md) / [Writing](/writing.md)
