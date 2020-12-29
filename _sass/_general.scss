@@ -81,7 +81,7 @@ body {
 
   @include media-query($on-palm) {
     position: absolute;
-    top: 9px;
+    top: 25px;
     right: $spacing-unit / 2;
     background-color: white;
     //border: 1px solid $grey-color-light;
@@ -155,11 +155,11 @@ body {
 
 .home-content {
   position: absolute;
-  top: 20vh;
+  top: 15vh;
 }
 
 .nav-links {
-  padding-top: 20px;
+  padding-top: 30px;
   list-style-type: none;
 }
 
@@ -264,13 +264,14 @@ a.writing {
 
 .home-description {
   font-family: $base-font-family;
+  line-height: 0;
 
   a:visited {
     color: black
   }
 }
 
-// Collapsable Summary
+// Collapsable Summary in About
 
 summary {
   cursor: pointer;
@@ -289,4 +290,34 @@ summary {
   > :last-child {
     margin-bottom: 0;
   }
+}
+
+// Stylize social icons for home
+// Currently on test.html
+ul.social-media-list li {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #{$grey-color-light};
+  padding-right: 15px;
+  vertical-align: text-top;
+}
+
+.svg-icon {
+  //width: 16px;
+  //height: 16px;
+  display: inline-block;
+  fill: #{$grey-color-light};
+  padding-right: 5px;
+  vertical-align: text-top;
+
+  &:hover {
+    fill: $highlight-color;
+  }
+}
+
+// Add social icons position
+.social-icons {
+  position: absolute;
+  top: 26vh;
 }
