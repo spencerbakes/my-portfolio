@@ -141,8 +141,11 @@ body {
   padding-top: 20px;
   list-style-type: none;
 }
-/**
-.nav-links > li > a {
+
+// Homepage
+// Note: Add Mixins with gradient parameters?
+
+a.about {
   font-size: 30px;
   font-weight: bold;
   line-height: 50px;
@@ -152,17 +155,14 @@ body {
           background-clip: text;
   color: transparent;
   background-image: linear-gradient(to right, var(--gradient-color-stops));
-  --gradient-from-color: #0041a3;
+  --gradient-from-color: #f8b932;
   --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
-  --gradient-to-color: #50f1c9;
+  --gradient-to-color: #fd3939;
   --text-opacity: 1;
   color: #000;
   color: rgba(0, 0, 0, var(--text-opacity));
   transition-duration: 300ms
 }
-*/
-
-// Note: Add Mixins with gradient parameters?
 
 a.design {
   font-size: 30px;
@@ -248,3 +248,10 @@ span {
     color: black
   }
 }
+
+// Collapsable Summary
+
+summary {
+  cursor: pointer;
+}
+
