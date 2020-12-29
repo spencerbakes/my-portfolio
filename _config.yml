@@ -34,7 +34,7 @@ plugins:
   - jekyll-feed 
 
 # if wanting expand/collapse markdown
-# markdown: CommonMarkGhPages
+markdown: CommonMarkGhPages
 
 # SASS
 sass:

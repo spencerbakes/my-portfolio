@@ -1,16 +1,39 @@
+// Need to separate into partials
+
 body {
   font-size: $base-font-size;
   font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+  padding-bottom: 80px;
 }
 .page-link, .site-title {
-  @include relative-font-size(1.125);
+  @include relative-font-size(1);
+  color: $grey-color-light;
   line-height: $base-line-height * $base-font-size * 2.25;
   font-family: $head-font-family;
   font-weight: 500;
-  &:visited {
+  
+  &:hover {
     color: $grey-color-medium-dark;
+    text-decoration: none;
   }
 }
+
+.post-title {
+  font-family: $title-font-family;
+  font-size: 30px;
+  line-height: 0.5;
+  padding-top: 20px;
+}
+
+// If wanting bottom border on some pages
+/**
+ * Site header
+ .site-header {
+  border-bottom: 1px solid $grey-color-light;
+}
+*/
 
 /**
  * Links
@@ -20,11 +43,11 @@ body {
   text-decoration: none;
 
   &:visited {
-    color: darken($brand-color, 15%);
+    //color: darken($brand-color, 35%);
   }
 
   &:hover {
-    color: $text-color;
+    color: $highlight-color;
     text-decoration: underline;
   }
 
@@ -50,8 +73,6 @@ body {
   }
 
   .page-link {
-    color: $text-color;
-
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
@@ -120,9 +141,9 @@ body {
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-  //@extend %clearfix;
+  //padding-right: $spacing-unit;
+  //padding-left: $spacing-unit;
+  //extend %clearfix;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -234,11 +255,11 @@ a.writing {
   font-weight: 900;
   margin: 0;
   padding: 0;
-}
-
-span {
-  font-size: 78px;
-  background-image: linear-gradient(transparent 64px, #70fcd9 50%, rgb(39, 106, 252) 100%);
+  
+  span {
+    font-size: 78px;
+    background-image: linear-gradient(transparent 64px, #70fcd9 50%, #276AFC 100%);
+  }
 }
 
 .home-description {
@@ -253,5 +274,19 @@ span {
 
 summary {
   cursor: pointer;
-}
+  outline: none;
+} 
 
+// If wanting left borders
+/**
+ * Blockquotes
+ */
+ blockquote {
+  border-left: 4px solid $text-color;
+  border-left-style: double;
+  padding-left: $spacing-unit / 1.5;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
