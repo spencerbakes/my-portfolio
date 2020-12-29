@@ -131,3 +131,120 @@ body {
     padding-left: $spacing-unit / 2;
   }
 }
+
+.home-content {
+  position: absolute;
+  top: 20vh;
+}
+
+.nav-links {
+  padding-top: 20px;
+  list-style-type: none;
+}
+/**
+.nav-links > li > a {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: $head-font-family;
+  border-style: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+  --gradient-from-color: #0041a3;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
+  --gradient-to-color: #50f1c9;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  transition-duration: 300ms
+}
+*/
+
+// Note: Add Mixins with gradient parameters?
+
+a.design {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: $head-font-family;
+  border-style: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+  --gradient-from-color: #fd3939;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
+  --gradient-to-color: #8447f7;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  transition-duration: 300ms
+}
+
+a.photography {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: $head-font-family;
+  border-style: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+  --gradient-from-color: #8447f7;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
+  --gradient-to-color: #0041a3;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  transition-duration: 300ms
+}
+
+a.writing {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  font-family: $head-font-family;
+  border-style: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+  --gradient-from-color: #0041a3;
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
+  --gradient-to-color: #50f1c9;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  transition-duration: 300ms
+}
+
+.nav-links > li > a:hover {
+  color: transparent;
+  text-decoration: none;
+}
+
+.home-intro {
+  font-family: $base-font-family;
+  font-size: 50px;
+  text-align: center;
+  //font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 78px;
+  background-image: linear-gradient(transparent 64px, #70fcd9 50%, rgb(39, 106, 252) 100%);
+}
+
+.home-description {
+  font-family: $base-font-family;
+
+  a:visited {
+    color: black
+  }
+}
