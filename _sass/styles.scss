@@ -2,12 +2,23 @@
 
 // Define new variables
 
+// Base Colors
 $background-color: #FFFFFF;
 $text-color:#000000;
-$grey-color-light: #a0a0a0;
+$grey-color-light: #888888; //Old #a0a0a0;
 $grey-color-medium-dark: #555555 !default;
-$brand-color: #276AFC; //#6dc1f1 !default;
-$highlight-color: #52dbf0; //#66e7dd;
+
+// Brand Colors
+$brand-color: #276AFC; //#6dc1f1 !default; (Old)
+$highlight-color: #5bd2e3;// #d0f6fc; OG: 52dbf0
+$underline-color: #52dbf0; // originally highlight color
+$highlight-override-color: #61e5fc62;
+$new-red: #fd3939;
+// New Colors
+$c1: #048eff; //#286bfb;
+$c2: #6cf3db;
+
+// Fonts & Spacing
 $spacing-unit: 30px !default;
 $base-line-height: 1.75 !default;
 $base-font-size: 19px;
@@ -50,6 +61,13 @@ $on-laptop:        800px !default;
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
+
+/**
+-- Add gradient CSS and variables for each color --
+@mixin gradient-fill($page) {
+
+}
+*/
 
 // Import partials.
 @import "general";
