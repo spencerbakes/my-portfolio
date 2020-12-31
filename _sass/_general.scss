@@ -412,6 +412,7 @@ a.page-link:hover {
   color: transparent;
   text-decoration: none;
 }
+
 /** 12/31
 p a {
   border-bottom: 3px solid $underline-color;
@@ -458,4 +459,12 @@ p a {
       box-shadow: inset 0 -40px 0 -1px $c2;
       //font-weight: var(--bolder);
     }
+}
+
+// Nav highlighting active page
+#about .trigger a.page-link[href="/my-portfolio/about/"],
+#design .trigger a.page-link[href="/my-portfolio/design/"],
+#photography .trigger a.page-link[href="/my-portfolio/photography/"],
+#writing .trigger a.page-link[href="/my-portfolio/writing/"] {
+  color: transparent;
 }
