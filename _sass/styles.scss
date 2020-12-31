@@ -8,7 +8,15 @@ $text-color:#000000;
 $grey-color-light: #888888; //Old #a0a0a0;
 $grey-color-medium-dark: #555555 !default;
 
-// Brand Colors
+// New Brand Colors
+$brand-color: #276AFC; //#6dc1f1 !default; (Old)
+$highlight-color: #6cf3db;
+$underline-color: #048eff;
+$highlight-override-color: #6cf3da75;
+$new-red: #fd3939;
+
+/* 
+-- Old Brand Colors --
 $brand-color: #276AFC; //#6dc1f1 !default; (Old)
 $highlight-color: #5bd2e3;// #d0f6fc; OG: 52dbf0
 $underline-color: #52dbf0; // originally highlight color
@@ -17,6 +25,7 @@ $new-red: #fd3939;
 // New Colors
 $c1: #048eff; //#286bfb;
 $c2: #6cf3db;
+*/
 
 // Fonts & Spacing
 $spacing-unit: 30px !default;
