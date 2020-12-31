@@ -5,8 +5,11 @@ body {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   line-height: $base-line-height;
+  color: $text-color;
+  background-color: $background-color;
   padding-bottom: 80px;
 }
+
 .page-link, .site-title {
   @include relative-font-size(1);
   color: $grey-color-light;
@@ -50,6 +53,7 @@ body {
   &:hover {
     color: $highlight-color;
     text-decoration: underline;
+    transition: color .1s, background-color .1s;
   }
 
   .social-media-list &:hover {
@@ -84,7 +88,7 @@ body {
     position: absolute;
     top: 25px;
     right: $spacing-unit / 2;
-    background-color: white;
+    background-color: $background-color;
     //border: 1px solid $grey-color-light;
     border-radius: 5px;
     text-align: right;
@@ -306,19 +310,20 @@ ul.social-media-list li {
   display: inline-block;
   fill: #{$grey-color-light};
   padding-right: 15px;
-  vertical-align: text-top;
+  //vertical-align: text-top;
 }
 
 .svg-icon {
-  //width: 16px;
-  //height: 16px;
+  width: 16px;
+  height: 16px;
   display: inline-block;
   fill: #{$grey-color-light};
   padding-right: 5px;
-  vertical-align: text-top;
+  //vertical-align: text-top;
 
   &:hover {
     fill: $highlight-color;
+    transition: fill .2s;
   }
 }
 
