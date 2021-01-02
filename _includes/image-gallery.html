@@ -1,0 +1,86 @@
+<!---
+    Image gallery for Photography page
+    Use liquid to automatically generate images
+-->
+
+<!-- Photo Grid -->
+<div class="gallery"> 
+    <div class="gallery-column">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-5.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-9.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-13.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-17.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-21.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-25.jpg" style="width:100%">
+      <img src="{{ site.baseurl }}/assets/images/gallery/image-29.jpg" style="width:100%">
+    </div>
+    <div class="gallery-column">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-2.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-6.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-10.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-14.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-18.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-22.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-26.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-30.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-31.jpg" style="width:100%">
+    </div>  
+    <div class="gallery-column">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-3.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-7.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-11.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-15.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-19.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-23.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-27.jpg" style="width:100%">
+        <!-- moved image to col2 -->
+    </div>
+    <div class="gallery-column">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-4.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-8.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-12.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-16.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-20.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-24.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-28.jpg" style="width:100%">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-32.jpg" style="width:100%">
+    </div>
+</div>
+
+<!--
+<div class="container">
+    <div class="gallery">
+        {% assign image_gallery = site.static_files | where: "image", true %}
+        {% for img in image_gallery %}
+            <figure class="gallery__item gallery__item--{{ forloop.index }}"></figure>
+                <img src="{{ site.baseurl }}{{ img.path }}" alt="Gallery Image {{ forloop.index }}" class="gallery__img">
+            </figure>
+        {% endfor %}
+    </div>
+</div>
+-->
+<!--
+<div class="gallery-container">
+    <div class=”gallery”>
+        <figure class="gallery-item gallery-item-1">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" class="gallery-img" alt="Image 1">
+        </figure>
+        <figure class="gallery-item gallery-item-2">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-2.jpg" class="gallery-img" alt="Image 2">
+        </figure>
+        <figure class="gallery-item gallery-item-3">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-3.jpg" class="gallery-img" alt="Image 3">
+        </figure>
+        <figure class="gallery-item gallery-item-4">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-4.jpg" class="gallery-img" alt="Image 4">
+        </figure>
+        <figure class="gallery-item gallery-item-5">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-5.jpg" class="gallery-img" alt="Image 5">
+        </figure>
+        <figure class="gallery-item gallery-item-6">
+        <img src="{{ site.baseurl }}/assets/images/gallery/image-6.jpg" class="gallery-img" alt="Image 6">
+        </figure>
+    </div>
+</div>
+-->

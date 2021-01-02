@@ -28,6 +28,7 @@ twitter_username: spencerbakes
 linkedin_username: spencerbbaker
 instagram_username: spencerbakes
 github_username: spencerbakes
+vsco_username: spencerbaker
 
 # Build settings
 # removed to play around with regular theme
@@ -42,6 +43,13 @@ markdown: CommonMarkGhPages
 sass:
   sass_dir: _sass
   style: compressed
+
+# Add Image Gallery front matter
+defaults:
+  - scope:
+      path: "assets/images/gallery"
+    values:
+      image: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
