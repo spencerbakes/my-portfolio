@@ -1,8 +1,13 @@
 // Styling for photo grid gallery
 
-#photography {
-    margin-right: 20vh;
-    margin-left: 20vh;
+// Also apply similar layout to Design page
+#photography, #design {
+
+    .page-content {
+      margin-right: 15vh;
+      margin-left: 15vh;
+      padding-top: 25px;
+    }
 
     /* Responsive layout - makes a two column-layout instead of four columns */
     @media screen and (max-width: 800px) {
@@ -20,6 +25,13 @@
             flex: 100%;
             max-width: 100%;
         }
+    }
+
+    @include media-query($on-laptop) {
+      max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+      max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+      padding-right: $spacing-unit / 2;
+      padding-left: $spacing-unit / 2;
     }
     
     // Align VSCO link right

@@ -1,143 +1,62 @@
-<!---
-    Image gallery for Photography page
-    Use liquid to automatically generate images
--->
-<!-- Photo Grid -->
-<!--
-<div class="gallery"> 
-    <div class="gallery-column">
-    <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-5.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-9.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-13.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-17.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-21.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-25.jpg" data-fancybox="gallery-image" style="width:100%">
-      <img src="{{ site.baseurl }}/assets/images/gallery/image-29.jpg" data-fancybox="gallery-image" style="width:100%">
-    </div>
-    <div class="gallery-column">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-2.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-6.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-10.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-14.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-18.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-22.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-26.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-30.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-31.jpg" data-fancybox="gallery-image" style="width:100%">
-    </div>  
-    <div class="gallery-column">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-3.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-7.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-11.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-15.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-19.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-23.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-27.jpg" data-fancybox="gallery-image" style="width:100%">
-        moved image to col2
-    </div>
-    <div class="gallery-column">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-4.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-8.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-12.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-16.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-20.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-24.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-28.jpg" data-fancybox="gallery-image" style="width:100%">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-32.jpg" data-fancybox="gallery-image" style="width:100%">
-    </div>
-</div>
--->
-
+<!-- Photo Gallery -->
 <div class="gallery">
-    {% assign image_gallery = site.static_files | where: "image", true %}
-    {% assign gallery_size = image_gallery.size %}
-    {% assign col_index = gallery_size | divided_by: 4 %}
+    {%- assign image_gallery = site.static_files | where: "image", true -%}
+    {%- assign gallery_size = image_gallery.size -%}
+    {%- assign col_index = gallery_size | divided_by: 4 -%}
     <!-- Column 1 -->
-    {% for img in image_gallery %}
-        {% assign col_mod = col_index | times: 4 %}
-        {% assign new_col = forloop.index | modulo: col_mod %}
-        {% if new_col == 1 %}<div class="gallery-column">{% endif %}
-            {% assign img_mod = forloop.index | modulo: 4 %}
-            {% if img_mod == 1 %}
+    {%- for img in image_gallery -%}
+        {%- assign col_mod = col_index | times: 4 -%}
+        {%- assign new_col = forloop.index | modulo: col_mod -%}
+        {%- if new_col == 1 -%}<div class="gallery-column">{%- endif -%}
+            {%- assign img_mod = forloop.index | modulo: 4 -%}
+            {%- if img_mod == 1 -%}
                 <a data-fancybox="gallery" data-options='{"buttons":["close"]}' 
                 href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
                 <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" 
                 style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
-            {% endif %}
-        {% if new_col == 0 %}</div>{% endif %}
-    {% endfor %}
+            {%- endif -%}
+        {%- if new_col == 0 -%}</div>{%- endif -%}
+    {%- endfor -%}
     <!-- Column 2 -->
-    {% for img in image_gallery %}
-        {% assign col_mod = col_index | times: 4 %}
-        {% assign new_col = forloop.index | modulo: col_mod %}
-        {% if new_col == 2 %}<div class="gallery-column">{% endif %}
-            {% assign img_mod = forloop.index | modulo: 4 %}
-            {% if img_mod == 2 %}
-                <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
-                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
-            {% endif %}
-        {% if new_col == 0 %}</div>{% endif %}
-    {% endfor %}
+    {%- for img in image_gallery -%}
+        {%- assign col_mod = col_index | times: 4 -%}
+        {%- assign new_col = forloop.index | modulo: col_mod -%}
+        {%- if new_col == 2 -%}<div class="gallery-column">{%- endif -%}
+            {%- assign img_mod = forloop.index | modulo: 4 -%}
+            {%- if img_mod == 2 -%}
+                <a data-fancybox="gallery" data-options='{"buttons":["close"]}' 
+                href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
+                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" 
+                style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
+            {%- endif -%}
+        {%- if new_col == 0 -%}</div>{%- endif -%}
+    {%- endfor -%}
     <!-- Column 3 -->
-    {% for img in image_gallery %}
-        {% assign col_mod = col_index | times: 4 %}
-        {% assign new_col = forloop.index | modulo: col_mod %}
-        {% if new_col == 3 %}<div class="gallery-column">{% endif %}
-            {% assign img_mod = forloop.index | modulo: 4 %}
-            {% if img_mod == 3 %}
-                <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
-                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
-            {% endif %}
-        {% if new_col == 0 %}</div>{% endif %}
-    {% endfor %}
+    {%- for img in image_gallery -%}
+        {%- assign col_mod = col_index | times: 4 -%}
+        {%- assign new_col = forloop.index | modulo: col_mod -%}
+        {%- if new_col == 3 -%}<div class="gallery-column">{%- endif -%}
+            {%- assign img_mod = forloop.index | modulo: 4 -%}
+            {%- if img_mod == 3 -%}
+                <a data-fancybox="gallery" data-options='{"buttons":["close"]}' 
+                href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
+                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" 
+                style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
+            {%- endif -%}
+        {%- if new_col == 0 -%}</div>{%- endif -%}
+    {%- endfor -%}
     <!-- Column 4 -->
-    {% for img in image_gallery %}
-        {% assign col_mod = col_index | times: 4 %}
-        {% assign new_col = forloop.index | modulo: col_mod %}
-        {% if new_col == 4 %}<div class="gallery-column">{% endif %}
-            {% assign img_mod = forloop.index | modulo: 4 %}
-            {% if img_mod == 0 %}
-                <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
-                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
-            {% endif %}
-        {% if new_col == 0 %}</div>{% endif %}
-    {% endfor %}
+    {%- for img in image_gallery -%}
+        {%- assign col_mod = col_index | times: 4 -%}
+        {%- assign new_col = forloop.index | modulo: col_mod -%}
+        {%- if new_col == 4 -%}<div class="gallery-column">{%- endif -%}
+            {%- assign img_mod = forloop.index | modulo: 4 -%}
+            {%- if img_mod == 0 -%}
+                <a data-fancybox="gallery" data-options='{"buttons":["close"]}' 
+                href="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg">
+                <img src="{{ site.baseurl }}/assets/images/gallery/image-{{ forloop.index }}.jpg" 
+                style="width:100%" alt="Gallery Image {{ forloop.index }}"></a>
+            {%- endif -%}
+        {%- if new_col == 0 -%}</div>{%- endif -%}
+    {%- endfor -%}
 </div>
-
-<!--
-<div class="container">
-    <div class="gallery-image">
-        {% assign image_gallery = site.static_files | where: "image", true %}
-        {% for img in image_gallery %}
-            <figure class="gallery__item gallery__item--{{ forloop.index }}"></figure>
-                <img src="{{ site.baseurl }}{{ img.path }}" alt="Gallery Image {{ forloop.index }}" class="gallery__img">
-            </figure>
-        {% endfor %}
-    </div>
-</div>
--->
-<!--
-<div class="gallery-container">
-    <div class=”gallery”>
-        <figure class="gallery-item gallery-item-1">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 1">
-        </figure>
-        <figure class="gallery-item gallery-item-2">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-2.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 2">
-        </figure>
-        <figure class="gallery-item gallery-item-3">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-3.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 3">
-        </figure>
-        <figure class="gallery-item gallery-item-4">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-4.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 4">
-        </figure>
-        <figure class="gallery-item gallery-item-5">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-5.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 5">
-        </figure>
-        <figure class="gallery-item gallery-item-6">
-        <img src="{{ site.baseurl }}/assets/images/gallery/image-6.jpg" data-fancybox="gallery-image" class="gallery-img" alt="Image 6">
-        </figure>
-    </div>
-</div>
--->

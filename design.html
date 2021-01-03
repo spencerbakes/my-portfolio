@@ -1,0 +1,39 @@
+---
+layout: page-unwrapped
+title: Design
+permalink: /design/
+exclude: false
+---
+<h3>Antique Alley Santa Barbara Website
+    <a href="https://www.antiquealleysb.com"><svg class="svg-icon header-icon"><use xlink:href="{{ '/assets/icons.svg#external-link' | relative_url }}"></use></svg></a>
+</h3>
+<!--
+<iframe class="antique-alley-site" src="https://www.antiquealleysb.com" title="Antique Alley Santa Barbarai Website"></iframe>
+-->
+<div class="gallery"> 
+    <div class="gallery-column">
+        <a data-fancybox="gallery" data-options='{"buttons":["close"]}' href="{{ site.baseurl }}/assets/images/websites/antique-alley-1.png"><img src="{{ site.baseurl }}/assets/images/websites/antique-alley-1.png" style="width:100%"></a>
+    </div>
+    <div class="gallery-column">
+        <a data-fancybox="gallery" data-options='{"buttons":["close"]}' href="{{ site.baseurl }}/assets/images/websites/antique-alley-2.png"><img src="{{ site.baseurl }}/assets/images/websites/antique-alley-2.png" style="width:100%"></a>
+    </div>  
+    <div class="gallery-column">
+        <a data-fancybox="gallery" data-options='{"buttons":["close"]}' href="{{ site.baseurl }}/assets/images/websites/antique-alley-3.png"><img src="{{ site.baseurl }}/assets/images/websites/antique-alley-3.png" style="width:100%"></a>
+    </div>
+    <div class="gallery-column">
+        <a data-fancybox="gallery" data-options='{"buttons":["close"]}' href="{{ site.baseurl }}/assets/images/websites/antique-alley-4.png"><img src="{{ site.baseurl }}/assets/images/websites/antique-alley-4.png" style="width:100%"></a>
+    </div>
+</div>
+
+<!-- Maybe a bit over-engineered...
+<div class="gallery"> 
+    {%- assign image_gallery = site.static_files | where: "path", true -%}
+    {%- for img in image_gallery -%}
+        <div class="gallery-column">
+            <a data-fancybox="gallery" data-options='{"buttons":["close"]}' href="{{ site.baseurl }}
+            /assets/images/websites/antique-alley-{{ forloop.index }}.png"><img src="{{ site.baseurl }}
+            /assets/images/websites/antique-alley-{{ forloop.index }}.png" style="width:100%"></a>
+        </div>
+    {%- endfor -%}
+</div>
+-->
