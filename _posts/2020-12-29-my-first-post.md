@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My Second (Still Test) Post"
-exclude: false
+exclude: true
 ---
 
 # Hello Again

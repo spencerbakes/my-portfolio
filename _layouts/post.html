@@ -1,18 +1,33 @@
 ---
 layout: default
 ---
+{%- include header.html -%}
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+{%- if page.banner -%}
+  <img class="banner-image" src="{{ site.baseurl }}/{{ page.banner }}"></a>
+{%- endif -%}
+
   <header class="post-header">
+    <h3 class="series">
+      {%- if page.series -%}
+      {{ page.series | escape }}
+      {%- endif -%}</p>
+    </h3>
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        <span class="meta-divider">&nbsp;/&nbsp;</span>
+      {%- endif -%}
+      <time class="date-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      <span class="meta-delimiter">&nbsp;›&nbsp;</span>
+      {%- include reading-time.html -%}
+    </p>
+    <div class="divider-line" id="top-line">⁘&#8193;&#8193;⁘&#8193;&#8193;⁘</div>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">

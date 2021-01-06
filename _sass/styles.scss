@@ -5,8 +5,11 @@
 // Base Colors
 $background-color: #FFFFFF;
 $text-color:#000000;
-$grey-color-light: #888888; //Old #a0a0a0;
-$grey-color-medium-dark: #555555 !default;
+$grey-color-lightest: #aab2b4;
+$grey-color-light: #9c9c9c; //Old #a0a0a0;
+$grey-color-medium-dark: #555555;
+$grey-color-medium: #333333;
+$grey-color-darkest: #222222;
 
 // New Brand Colors
 $brand-color: #276AFC; //#6dc1f1 !default; (Old)
@@ -31,7 +34,7 @@ $c2: #6cf3db;
 $spacing-unit: 30px !default;
 $base-line-height: 1.75 !default;
 $base-font-size: 19px;
-$base-font-weight: 400;
+$base-font-weight: 375; // Changed to variable from 400
 
 // Define New Fonts
 $serif: 'Roboto Slab', serif;

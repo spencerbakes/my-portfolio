@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My First Actual (Test) Post"
-exclude: false
+exclude: true
 ---
 
 # Hello
