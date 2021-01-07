@@ -50,6 +50,13 @@ defaults:
       path: "assets/images/gallery"
     values:
       image: true
+  - scope:
+      type: posts
+      path: _posts
+    values:
+      is_post: true
+      layout: post
+      permalink: /writing/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

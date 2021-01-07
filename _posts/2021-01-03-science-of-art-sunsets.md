@@ -48,20 +48,20 @@ It’s probably no surprise to anyone that clouds can make for an extraordinary 
 
 <p class="divider-line">⁘&#8193;&#8193;⁘&#8193;&#8193;⁘</p>
 
-<p id="p4">Back to the scene: the sun dips below the oil rig, and you take out your phone. You look at photos posted by your friends. Maybe they’re better than yours; maybe they’re just more timely. But no one else in the world had the same experience you just had. <a href="#6">No one else perceived the same color, had the same feelings or considered the same mysteries behind such a routine occurrence.<sup>6</sup></a> As <a href="https://tinyurl.com/sunsetromance">Carl Sagan said</a>, <i>“It does no harm to the romance of the sunset to know a little bit about it.”</i> From the spherical <a href="#7">ball of hot plasma<sup>7</sup></a> 93 million miles away to the cones in your eyes, light makes a <a href="#8">long journey<sup>8</sup></a> to show us that science and art naturally reside together.</p>
+<p id="p4">Back to the scene: the sun dips below the oil rig, and you take out your phone. You look at photos posted by your friends. Maybe they’re better than yours; maybe they’re just more timely. But no one else in the world had the same experience you just had. <a href="#6">No one else perceived the same color, had the same feelings or considered the same mysteries behind such a routine occurrence.<sup>6</sup></a> As <a href="https://tinyurl.com/sunsetromance">Carl Sagan said</a>, <em>“It does no harm to the romance of the sunset to know a little bit about it.”</em> From the spherical <a href="#7">ball of hot plasma<sup>7</sup></a> 93 million miles away to the cones in your eyes, light makes a <a href="#8">long journey<sup>8</sup></a> to show us that science and art naturally reside together.</p>
 
 <img class="post-img" src="{{ site.baseurl }}/assets/images/writing/isla-vista-sunset-bird.jpg" alt="Santa Barbara Sunset Ocean">
 
 ### Footnotes
 <ol class="footnotes">
-    <li id="1"><a href="#2">Portmanteau<sup>1</sup></a> of the words smoke and fog &nbsp;<a class="back-up" href="#p1">↑</a></li>
-    <li id="2">Linguistic combination of multiple words or their sounds &nbsp;<a class="back-up" href="#p1">↑</a></li>
-    <li id="3">Solid or liquid particles in the air&nbsp;<a class="back-up" href="#p1">↑</a></li>
-    <li id="4">Rafters &nbsp;<a class="back-up" href="#p2">↑</a></li>
-    <li id="5">To put it in an IV perspective: there are more stars in the universe than grains of sand on Earth. &nbsp;<a class="back-up" href="#p3">↑</a></li>
-    <li id="6">Mostly because no one else probably read this article. You’re already winning in my book. &nbsp;<a class="back-up" href="#p4">↑</a></li>
-    <li id="7">The sun &nbsp;<a class="back-up" href="#p4">↑</a></li>
-    <li id="8">The length of “Touch” by Daft Punk (8:19) &nbsp;<a class="back-up" href="#p4">↑</a></li>
+    <li><span id="1"><a href="#2">Portmanteau<sup>2</sup></a> of the words smoke and fog &nbsp;<a class="back-up" href="#p1">↑</a></span></li>
+    <li><span id="2">Linguistic combination of multiple words or their sounds &nbsp;<a class="back-up" href="#p1">↑</a></span></li>
+    <li><span id="3">Solid or liquid particles in the air&nbsp;<a class="back-up" href="#p1">↑</a></span></li>
+    <li><span id="4">Rafters &nbsp;<a class="back-up" href="#p2">↑</a></span></li>
+    <li><span id="5">To put it in an IV perspective: there are more stars in the universe than grains of sand on Earth. &nbsp;<a class="back-up" href="#p3">↑</a></span></li>
+    <li><span id="6">Mostly because no one else probably read this article. You’re already winning in my book. &nbsp;<a class="back-up" href="#p4">↑</a></span></li>
+    <li><span id="7">The sun &nbsp;<a class="back-up" href="#p4">↑</a></span></li>
+    <li><span id="8">The length of “Touch” by Daft Punk (8:19) &nbsp;<a class="back-up" href="#p4">↑</a></span></li>
 </ol><br>
 
 <img class="post-img" src="{{ site.baseurl }}/assets/images/writing/instasunset.jpg" alt="Santa Barbara Sunset Beach">
