@@ -1,42 +1,47 @@
 ---
-layout: default
+layout: page-unwrapped
 ---
-{%- include header.html -%}
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
 {%- if page.banner -%}
   <img class="banner-image" src="{{ site.baseurl }}/{{ page.banner }}"></a>
 {%- endif -%}
 
-  <header class="post-header">
-    <h3 class="series">
-      {%- if page.series -%}
-      {{ page.series | escape }}
-      {%- endif -%}</p>
-    </h3>
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-        <span class="meta-divider">&nbsp;/&nbsp;</span>
-      {%- endif -%}
-      <time class="date-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      <span class="meta-delimiter">&nbsp;›&nbsp;</span>
-      {%- include reading-time.html -%}
-    </p>
-    <div class="divider-line" id="top-line">⁘&#8193;&#8193;⁘&#8193;&#8193;⁘</div>
-  </header>
+<div class="wrapper">
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+      <a class="home-back-arrow" href="{{ "/writing" | relative_url }}">&#8592</a>
+      <h3 class="series">
+        {%- if page.series -%}
+        {{ page.series | escape }}
+        {%- endif -%}</p>
+      </h3>
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+          <span class="meta-divider">&nbsp;/&nbsp;</span>
+        {%- endif -%}
+        <time class="date-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          {{ page.date | date: date_format }}
+        </time>
+        <span class="meta-delimiter">&nbsp;›&nbsp;</span>
+        {%- include reading-time.html -%}
+      </p>
+      <div class="divider-line" id="top-line">⁘&#8193;&#8193;⁘&#8193;&#8193;⁘</div>
+    </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- if site.disqus.shortname -%}
+      {%- include disqus_comments.html -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </article>
+</div>
+
+{%- if page.footer -%}
+  <img class="footer-image" src="{{ site.baseurl }}/{{ page.footer }}"></a>
+{%- endif -%}

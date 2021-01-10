@@ -35,6 +35,7 @@ $spacing-unit: 30px !default;
 $base-line-height: 1.75 !default;
 $base-font-size: 19px;
 $base-font-weight: 375; // Changed to variable from 400
+$bold-font-weight: 500;
 
 // Define New Fonts
 $serif: 'Roboto Slab', serif;
@@ -84,3 +85,4 @@ $on-laptop:        800px !default;
 // Import partials.
 @import "general";
 @import "gallery";
+//@import "nav/hamburgers";

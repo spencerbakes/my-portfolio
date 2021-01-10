@@ -58,7 +58,7 @@ body {
  */
  a {
   color: $text-color;
-  font-weight: 500;
+  font-weight: $bold-font-weight;
   text-decoration: none;
   /*
   &:visited {
@@ -704,10 +704,18 @@ figcaption {
 
 .banner-image {
   object-fit: cover;
-  height: 300px;
+  object-position: 80% 80%;
+  height: 400px;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  //padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.footer-image {
+  object-fit: cover;
+  //object-position: 80% 80%;
+  max-height: 800px;
+  width: 100%;
 }
 
 // Jump to above elements

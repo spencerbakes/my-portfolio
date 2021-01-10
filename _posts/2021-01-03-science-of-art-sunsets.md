@@ -3,6 +3,7 @@ layout: post
 series: "The Science of Art"
 title: "The Science Behind Those Sunsets You Can't Stop Instagramming"
 banner: /assets/images/writing/isla-vista-pink-sunset.jpg
+footer: /assets/images/writing/instasunset.jpg
 exclude: false
 ---
 
@@ -63,5 +64,3 @@ It’s probably no surprise to anyone that clouds can make for an extraordinary 
     <li><span id="7">The sun &nbsp;<a class="back-up" href="#p4">↑</a></span></li>
     <li><span id="8">The length of “Touch” by Daft Punk (8:19) &nbsp;<a class="back-up" href="#p4">↑</a></span></li>
 </ol><br>
-
-<img class="post-img" src="{{ site.baseurl }}/assets/images/writing/instasunset.jpg" alt="Santa Barbara Sunset Beach">
