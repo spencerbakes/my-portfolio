@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ "/assets/styles/main.css" | relative_url }}">
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@1,300..400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&display=swap" rel="stylesheet">
 <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{"/assets/images/apple-touch-icon.png"> | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{"/assets/images/favicon-32x32.png" | relative_url }}">
@@ -18,11 +18,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="{{"/assets/images/browserconfig.xml" | relative_url }}">
 <meta name="theme-color" content="#ffffff">
-<!-- Fancybox -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-  {%- feed_meta -%}
+{%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}

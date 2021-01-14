@@ -26,6 +26,9 @@ layout: page-unwrapped
         </time>
         <span class="meta-delimiter">&nbsp;›&nbsp;</span>
         {%- include reading-time.html -%}
+        {%- if page.context -%}
+        <p class="post-context">{{ page.context }}</p>
+        {%- endif -%}
       </p>
       <div class="divider-line" id="top-line">⁘&#8193;&#8193;⁘&#8193;&#8193;⁘</div>
     </header>
