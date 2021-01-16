@@ -47,7 +47,7 @@ sass:
 # Add Image Gallery front matter
 defaults:
   - scope:
-      path: "assets/images/gallery"
+      path: "assets/images/gallery/full"
     values:
       image: true
   - scope:
