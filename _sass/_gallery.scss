@@ -35,7 +35,7 @@
     }
     
     // Align VSCO link right
-    .page-content p {
+    .page-content p.link-text-right {
         text-align: right;
     }
 }
@@ -45,7 +45,7 @@
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0;
 }
 
 /* Create four equal columns that sits next to each other */
