@@ -5,6 +5,7 @@ title: "The Science Behind Those Sunsets You Can't Stop Instagramming"
 banner: /assets/images/writing/isla-vista-pink-sunset.jpg
 footer: /assets/images/writing/instasunset.jpg
 context: "This was the first piece for a series seeking to explore artistic media and phenomena from a scientific standpoint, written for UC Santa Barbara students in Isla Vista, a beachside community with particularly beautiful sunsets."
+teaser: "First piece in a series titled 'The Science of Art'."
 exclude: false
 ---
 

@@ -11,23 +11,31 @@ permalink: /writing/
       {%- for post in site.posts -%}
       {%- if post.exclude == false -%}
       <li>
-        <article class="post-teaser">
+        <article class="post-item">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <span class="post-date">{{ post.date | date: date_format }}</span>
           {%- unless post.link -%}
+          <div class="post-text">
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
               </a>
-            </h3>
+            </h3> 
+            <!--
+            {%- if post.context -%}
+              <span class="post-teaser">{{ post.teaser }}</span>
+            {%- endif -%} -->
+          </div>
           {%- endunless -%}
           {%- if post.link -%}
+          <div class="post-text">
             <h3>
               <a class="post-link" href="{{ post.link }}">
                 {{ post.title | escape }}
                 <svg class="external-post-icon"><use xlink:href="{{ '/assets/icons.svg#external-link' | relative_url }}"></use></svg>
               </a>
             </h3>
+          </div>
             {%- endif -%}
           {%- if site.show_excerpts -%}
             {{ post.excerpt }}
@@ -41,4 +49,10 @@ permalink: /writing/
     <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 </div>
+
+<!-- Tooltip
+<a class="post-link tooltip-toggle" href="{{ post.url | relative_url }}" aria-label="{{ post.teaser }}" tabindex="0">
+  {{ post.title | escape }}
+  </a>
+-->
 

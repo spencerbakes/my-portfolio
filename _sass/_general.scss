@@ -87,7 +87,7 @@ body {
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
-      display: none;
+    display: none;
   }
 
   .menu-icon {
@@ -770,6 +770,10 @@ em {
   color: $grey-color-darkest;
   padding-top: 75px;
   line-height: 0.5;
+
+  @include media-query($on-palm) {
+    line-height: 1;
+  }
 }
 
 .post-list {
@@ -782,7 +786,7 @@ em {
   }
 }
 
-.post-teaser {
+.post-item {
   display: inline-grid;
   grid-template-columns: 6em 1fr;
   grid-gap: 30px;
@@ -811,6 +815,13 @@ em {
       box-shadow: inset 0 -40px 0 -1px $highlight-color;
     }
   }
+  /*
+  .post-teaser {
+    color: $grey-color-lightest;
+    font-family: $sans-serif;
+    font-size: 18px;
+  }
+  */
 }
 
 .external-post-icon {
@@ -865,7 +876,7 @@ sup {
 .project-description {
   font-size: 16px;
   margin-left: 5px;
-  margin-right: 20vw;
+  margin-right: 15vw;
   padding-bottom: 10px;
 }
 
@@ -876,4 +887,63 @@ sup {
   width: 100%;
   //padding-top: 15px;
   //padding-bottom: 10px;
+}
+
+// Tooltip
+
+.tooltip-toggle {
+  cursor: pointer;
+  position: relative;
+  font-family: $sans-serif;
+  font-size: 12px;
+
+  //Tooltip text container - above element
+  //You can adjust the position to make the container appear below or beside the element
+  &::before {
+    background-color: $grey-color-darkest;
+    border-radius: 5px;
+    color: #fff;
+    content: attr(aria-label); //This pulls in the text from the element with the tooltip
+    left: -80px; //This centers the container above the element
+    padding: 1rem;
+    position: absolute;
+    text-transform: none;
+    top: -80px; //This places the container above the element that needs a tooltip
+    transition: all 0.5s ease;
+    width: 160px;
+  }
+
+  //Tooltip arrow
+  //You can adjust the position of this to align nicely with the element that
+  //needs a tooltip. You can also use `transform` to rotate it to make the
+  //tooltip work below or next to the element.
+  &::after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    content: " ";
+    font-size: 0;
+    left: 9px; //This centers the arrow above the element with the tooltip
+    line-height: 0;
+    margin-left: -5px;
+    position: absolute;
+    top: -12px; //This positions the arrow at the bottom of the container
+    width: 0;
+  }
+
+  //Setting up the transition
+  &::before,
+  &::after {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  //Triggering the transition
+  &:focus::before,
+  &:focus::after,
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
+  }
 }

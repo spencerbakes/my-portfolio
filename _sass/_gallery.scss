@@ -4,9 +4,13 @@
 #photography, #design {
 
     .page-content {
-      margin-right: 15vh;
-      margin-left: 15vh;
+      margin-right: 7vw;
+      margin-left: 7vw;
       padding-top: 25px;
+
+      @include media-query($on-palm) {
+        margin: 0;
+      }
     }
 
     /* Responsive layout - makes a two column-layout instead of four columns */
@@ -26,7 +30,7 @@
             max-width: 100%;
         }
     }
-
+    
     @include media-query($on-laptop) {
       max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
       max-width:         calc(#{$content-width} - (#{$spacing-unit}));
