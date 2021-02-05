@@ -180,6 +180,10 @@ body {
   //margin-right: 55px;
   position: absolute;
   top: 15vh;
+
+  @include media-query($on-laptop) {
+    margin-left: 30px;
+  }
 }
 
 .nav-links {
