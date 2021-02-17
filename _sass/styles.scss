@@ -1,34 +1,21 @@
 @charset "utf-8";
 
-// Define new variables
+// Define Variables
 
 // Base Colors
 $background-color: #FFFFFF;
 $text-color:#000000;
 $grey-color-lightest: #aab2b4;
-$grey-color-light: #9c9c9c; //Old #a0a0a0;
+$grey-color-light: #9c9c9c;
 $grey-color-medium-dark: #555555;
 $grey-color-medium: #333333;
 $grey-color-darkest: #222222;
 
 // New Brand Colors
-$brand-color: #276AFC; //#6dc1f1 !default; (Old)
+$brand-color: #276AFC;
 $highlight-color: #6cf3db;
 $underline-color: #048eff;
 $highlight-override-color: #6cf3da75;
-$new-red: #fd3939;
-
-/* 
--- Old Brand Colors --
-$brand-color: #276AFC; //#6dc1f1 !default; (Old)
-$highlight-color: #5bd2e3;// #d0f6fc; OG: 52dbf0
-$underline-color: #52dbf0; // originally highlight color
-$highlight-override-color: #61e5fc62;
-$new-red: #fd3939;
-// New Colors
-$c1: #048eff; //#286bfb;
-$c2: #6cf3db;
-*/
 
 // Fonts & Spacing
 $spacing-unit: 30px !default;
@@ -46,43 +33,41 @@ $base-font-family: $serif;
 $head-font-family: $sans-serif;
 $title-font-family: $sans-serif;
 
-// Define Fonts
-//$base-font-family: Montserrat;
-//$head-font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-//$title-font-family: 'Roboto Slab';
-//$base-font-family-old: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
 // Width of the content area
 $content-width:    800px !default;
-
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .wrapper {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
   }
 }
 
+// Gradient Mixin for Titles
+@mixin gradient-fill($from-color, $to-color, $transition-duration) {
+  border-style: none;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--gradient-color-stops));
+  --gradient-from-color: #{$from-color};
+  --gradient-color-stops: var(--gradient-from-color), var(--gradient-to-color, rgba(131, 56, 236, 0));
+  --gradient-to-color: #{$to-color};
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  transition-duration: $transition-duration;
+}
+
+
+// Currently Not Using
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }
 
-/**
--- Add gradient CSS and variables for each color --
-@mixin gradient-fill($page) {
-
-}
-*/
-
 // Import partials.
 @import "general";
 @import "gallery";
+@import "post";
 //@import "nav/hamburgers";

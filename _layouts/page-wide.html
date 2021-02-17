@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
-  {%- include head.html -%}
-  <!-- Get page title for dynamic nav highlighting -->
-  <body id="{{ page.title | downcase }}">
-
-    <main class="page-body" aria-label="Content">
-      <div class="wide-wrapper">
-        {%- include header.html -%} 
-      </div>           
-      <div class="page-content">
-        <div class="mobile-wrapper">
-          {{ content }}
-        </div>
-      </div>
-    </main>
-
-    <!-- Include scripts -->
-    {% include scripts.html %}
-
-  </body>
-
-</html>
+---
+layout: default
+---
+<div class="wide-wrapper">
+  {%- include header.html -%} 
+</div>           
+<div class="page-content">
+  <div class="mobile-wrapper">
+    {{ content }}
+  </div>
+</div>

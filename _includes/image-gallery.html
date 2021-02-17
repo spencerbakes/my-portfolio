@@ -1,25 +1,4 @@
-<!-- Photo Gallery -->
-<!--
-<div class="gallery"> 
-    <div class="gallery-column">
-    <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    </div>
-    <div class="gallery-column">
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    </div>  
-    <div class="gallery-column">
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    </div>
-    <div class="gallery-column">
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-        <a data-fancybox="gallery" href="{{ site.baseurl }}/assets/images/gallery/image-1.jpg"><img src="{{ site.baseurl }}/assets/images/gallery/image-1.jpg" style="width:100%"></a>
-    </div>
-</div>
--->
+<!-- Gallery column generator; requires multiple of 4 -->
 <div class="gallery">
     {%- assign image_gallery = site.static_files | where: "image", true -%}
     {%- assign gallery_size = image_gallery.size -%}

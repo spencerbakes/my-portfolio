@@ -16,10 +16,6 @@ layout: page-wide
       </h3>
       <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
       <p class="post-meta">
-        {%- if page.author -%}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-          <span class="meta-divider">&nbsp;/&nbsp;</span>
-        {%- endif -%}
         <time class="date-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           {{ page.date | date: date_format }}
@@ -37,14 +33,6 @@ layout: page-wide
       {{ content }}
     </div>
 
-    {%- if site.disqus.shortname -%}
-      {%- include disqus_comments.html -%}
-    {%- endif -%}
-
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
   </article>
 </div>
-
-{%- if page.footer -%}
-  <img class="footer-image" src="{{ site.baseurl }}/{{ page.footer }}"></a>
-{%- endif -%}

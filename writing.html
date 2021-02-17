@@ -20,10 +20,6 @@ permalink: /writing/
                 {{ post.title | escape }}
               </a>
             </h3> 
-            <!--
-            {%- if post.context -%}
-              <span class="post-teaser">{{ post.teaser }}</span>
-            {%- endif -%} -->
           </div>
           {%- endunless -%}
           {%- if post.link -%}
@@ -44,13 +40,5 @@ permalink: /writing/
       {%- endif -%}
       {%- endfor -%}
     </ul>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
-
-<!-- Tooltip
-<a class="post-link tooltip-toggle" href="{{ post.url | relative_url }}" aria-label="{{ post.teaser }}" tabindex="0">
-  {{ post.title | escape }}
-  </a>
--->
 
