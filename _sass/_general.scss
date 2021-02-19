@@ -234,6 +234,11 @@ ul.social-media-list li {
   &#twitter-icon {
     padding-right: 13px;
   }
+
+  @include media-query($on-palm) {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .svg-icon {
@@ -247,6 +252,11 @@ ul.social-media-list li {
   &:hover {
     fill: $highlight-color;
     transition: fill .2s;
+  }
+
+  @include media-query($on-palm) {
+    width: 22px;
+    height: 22px;
   }
 }
 

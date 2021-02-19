@@ -14,139 +14,155 @@ li > span:target {
     }
   }
   
-  // Styling for up arrow, maybe combine with "p a"
-  a.back-up {
-    color: $text-color;
-    font-weight: bolder;
-    transition: color .1s ease-in-out;
-  
-      &:hover {
-        color: $highlight-color;
-      }
-  }
-  
-  .post-content > img {
-    max-width: 100%;
-    max-height: 600px;
-    padding: 20px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  ol li {
-    padding-left: 1em;
-  }
-  
-  // Titles
-  
-  .series {
-    color: $grey-color-light;
-    text-transform: uppercase;
-    font-family: $sans-serif;
-    font-size: 15px;
-    font-weight: 900;
-    letter-spacing: 0.3em;
-    line-height: 0.2;
-    margin-bottom: 0;
-  }
-  
-  .post-title {
-    font-family: $sans-serif;
-    font-size: 45px;
-    line-height: 1.3;
-    color: $grey-color-darkest;
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-  
-  .post-meta {
-    color: $grey-color-lightest;
-    font-family: $sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 0;
-  }
-  
-  figure {
-    padding: 15px 0;
-  }
-  
-  figure > img {
-    max-width: 100%;
-    max-height: 400px;
-    padding: 5px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  figcaption {
-    color: $grey-color-light;
-    font-family: $sans-serif;
-    font-size: 13px;
-    font-weight: 400;
-    text-align: center;
-  
-    a {
-      color: inherit;
-      text-decoration: underline;
+// Styling for up arrow, maybe combine with "p a"
+a.back-up {
+  color: $text-color;
+  font-weight: bolder;
+  transition: color .1s ease-in-out;
+
+    &:hover {
+      color: $highlight-color;
     }
-  }
+}
   
-  .divider-line {
-    color: $grey-color-medium-dark;
-    font-size: 12px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  
-    &:not(#top-line) {
-      margin-top: 40px;
-    }
+.post-content > img {
+  max-width: 100%;
+  max-height: 600px;
+  padding: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol li {
+  padding-left: 1em;
+}
+
+// Titles
+
+.series {
+  color: $grey-color-light;
+  text-transform: uppercase;
+  font-family: $sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  line-height: 0.2;
+  margin-bottom: 0;
+}
+
+.post-title {
+  font-family: $sans-serif;
+  font-size: 45px;
+  line-height: 1.3;
+  color: $grey-color-darkest;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.post-meta {
+  color: $grey-color-lightest;
+  font-family: $sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+figure {
+  padding: 15px 0;
+}
+
+figure > img {
+  max-width: 100%;
+  max-height: 400px;
+  padding: 5px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  color: $grey-color-light;
+  font-family: $sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
   }
-  
-  .banner-image {
-    object-fit: cover;
-    object-position: 80% 80%;
-    height: 400px;
-    width: 100%;
-    padding-bottom: 10px;
+}
+
+.divider-line {
+  color: $grey-color-medium-dark;
+  font-size: 12px;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  &:not(#top-line) {
+    margin-top: 40px;
   }
-  
-  .footer-image {
-    object-fit: cover;
-    max-height: 800px;
-    width: 100%;
-    //object-position: 80% 80%;
+}
+
+.banner-image {
+  object-fit: cover;
+  object-position: 80% 80%;
+  height: 400px;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.footer-image {
+  object-fit: cover;
+  max-height: 800px;
+  width: 100%;
+  //object-position: 80% 80%;
+}
+
+// Jump to above elements
+[id] {
+  scroll-margin-top: 100px;
+}
+
+// Highlight paragraph after jumping back
+.post-content > p:target {
+  animation: highlight-paragraph 1.5s;
+  //animation-timing-function: linear;
+}
+@keyframes highlight-paragraph {
+  0% {
+    //box-shadow: inset 800px 0 0 -1px $highlight-color;
+    background-color: $highlight-color;
   }
-  
-  // Jump to above elements
-  [id] {
-    scroll-margin-top: 100px;
+  25% {
+    //box-shadow: inset 800px 0 0 -1px $highlight-color;
+    background-color: $highlight-color;
   }
-  
-  // Highlight paragraph after jumping back
-  .post-content > p:target {
-    animation: highlight-paragraph 3s;
-    //animation-timing-function: linear;
+  100% {
+    //box-shadow: inset 0 0 0 -1px $highlight-color;
+    background-color: none;
   }
-  @keyframes highlight-paragraph {
-    0% {
-      border-left: 5px solid $highlight-color;
-      padding-left: 5px;
-      margin-right: -20px;
-    }
-    90% {
-      border-left: 5px solid $highlight-color;
-      padding-left: 5px;
-      margin-right: -20px;
-    }
-    100% {
-      border-left: 0 solid transparent;
-    }
+}
+/* Highlight left block quote
+@keyframes highlight-paragraph {
+  0% {
+    border-left: 5px solid $highlight-color;
+    padding-left: 5px;
+    margin-right: -20px;
   }
+  90% {
+    border-left: 5px solid $highlight-color;
+    padding-left: 5px;
+    margin-right: -20px;
+  }
+  100% {
+    border-left: 0 solid transparent;
+  }
+}
+*/
 
 // Fix superscript line height
 sup { 
