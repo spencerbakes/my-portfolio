@@ -138,7 +138,7 @@ body {
 
 .home-content {
   position: absolute;
-  top: 15vh;
+  top: 12vh;
 
   @include media-query($on-laptop) {
     margin-left: 30px;
