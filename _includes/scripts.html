@@ -39,7 +39,7 @@
 <!-- Remove Widows -->
 <script>
     // removes widows from paragraphs and li      
-    $('p').each(function(){
+    $('p:not(.home-description)').each(function(){
         var string = $.trim($(this).html());
         string = string.replace(/ ([^ ]*) ([^ ]*)$/,'&nbsp;$1&nbsp;$2');
         $(this).html(string);
