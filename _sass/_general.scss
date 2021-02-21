@@ -282,19 +282,19 @@ ul.social-media-list li {
 
 // Style page links independently
 
-a.page-link[href="/my-portfolio/about/"] {
+a.page-link[href="/about/"] {
   @include gradient-fill(#f8b932, #fd3939, 200ms);
 }
 
-a.page-link[href="/my-portfolio/design/"] {
+a.page-link[href="/design/"] {
   @include gradient-fill(#fd3939, #8447f7, 200ms);
 }
 
-a.page-link[href="/my-portfolio/photography/"] {
+a.page-link[href="/photography/"] {
   @include gradient-fill(#8447f7, #0041a3, 200ms);
 }
 
-a.page-link[href="/my-portfolio/writing/"] {
+a.page-link[href="/writing/"] {
   @include gradient-fill(#0041a3, #50f1c9, 200ms);
 }
 
@@ -324,10 +324,10 @@ p a:not(#vsco-icon) {
 }
 
 // Nav highlighting active page
-#about .trigger a.page-link[href="/my-portfolio/about/"],
-#design .trigger a.page-link[href="/my-portfolio/design/"],
-#photography .trigger a.page-link[href="/my-portfolio/photography/"],
-#writing .trigger a.page-link[href="/my-portfolio/writing/"] {
+#about .trigger a.page-link[href="/about/"],
+#design .trigger a.page-link[href="/design/"],
+#photography .trigger a.page-link[href="/photography/"],
+#writing .trigger a.page-link[href="/writing/"] {
   color: transparent;
   font-size: 24px;
 }
