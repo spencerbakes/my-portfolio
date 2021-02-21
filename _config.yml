@@ -30,6 +30,9 @@ instagram_username: spencerbakes
 github_username: spencerbakes
 vsco_username: spencerbaker
 
+# Google Analytics
+google_analytics: UA-190306173-1
+
 # Build settings
 # removed to play around with regular theme
 # theme: null
