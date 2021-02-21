@@ -207,13 +207,18 @@ summary {
 /**
  * Blockquotes
  */
- blockquote {
+blockquote {
   border-left: 4px solid $text-color;
   border-left-style: double;
   padding-left: $spacing-unit / 1.5;
 
   > :last-child {
     margin-bottom: 0;
+  }
+
+  @include media-query($on-palm) {
+    margin-inline-start: 5px;
+    margin-inline-end: 0px;
   }
 }
 
@@ -490,3 +495,15 @@ p a:not(#vsco-icon) {
     padding-left: $spacing-unit / 2;
   }
 }
+
+/*
+.back-arrow-icon {
+  display: block;
+  float: left;
+  width: 36px;
+  height: 26px;
+  line-height: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+*/
