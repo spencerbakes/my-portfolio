@@ -19,4 +19,4 @@ Want to chat or let me know you made it this far? Feel free to [tweet](https://t
 
 ### About This Site
 
-This portfolio is a collection of things I like to make outside of work (since, unfortunately, most of those details can't be shared publicly). The site itself is generated with [Jekyll](https://jekyllrb.com/), hosted through [GitHub Pages](https://pages.github.com/) and built by yours truly.
+This portfolio is a collection of things I like to make outside of work (since, unfortunately, most of those details can't be shared publicly). The site itself is generated with [Jekyll](https://jekyllrb.com/), hosted through [GitHub Pages](https://pages.github.com/) and built by yours truly. You can find the source code on [GitHub](https://github.com/spencerbakes/my-portfolio), if you're into that sort of thing.
